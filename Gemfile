@@ -5,7 +5,7 @@ gem 'rails', '4.0.0'
 gem 'atomic', '1.1.12'
 
 group :development, :test do
-	gem 'rspec-rails'
+	gem 'rspec-rails', '~> 2.0'
 	gem 'better_errors'
 end
 

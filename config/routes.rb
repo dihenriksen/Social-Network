@@ -1,5 +1,5 @@
 Reputation::Application.routes.draw do
-  get "profile/new"
+  get "/new" => "profile#new"
   get "profile/create"
   get "profile/show"
   get "profile/edit"
@@ -9,7 +9,7 @@ Reputation::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'profile#show'
+  root to: 'profile#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
