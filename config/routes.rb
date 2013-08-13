@@ -1,4 +1,6 @@
 Reputation::Application.routes.draw do
+  resources :users
+
   get "/new" => "profile#new"
   get "profile/create"
   get "profile/show"
