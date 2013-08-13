@@ -4,8 +4,5 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # This block of code allows models to be created in mongo-mapper
-  config.generators do |g|
-  	g.orm :mongo_mapper
-  end
 
 end

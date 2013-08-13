@@ -10,6 +10,13 @@ group :development, :test do
 	gem 'capybara', '2.1.0'
 end
 
+gem 'mongo_mapper', github: 'jnunemaker/mongomapper', ref: "f08b34815e3a36cc94a5ed70e334700a664fa856"
+gem 'bson_ext'
+
+# group :production do
+# 	uri: <%= ENV['MONGODB_URI'] %>
+# end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
