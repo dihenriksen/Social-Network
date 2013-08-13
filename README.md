@@ -1,5 +1,3 @@
-This is a project for a General Assembly course.
+I am trying to create a social network wherein users do not have control over their own profile, but rather their profile is edited by everyone else. Additionally, there will be a page viewable only by the user, where their reputation based on the activity of others on their profile, and their own anonymous contributions to the site, is condensed and summarized. Realistically, I hope to hardcode in a few users, allow them to edit profiles, create new profiles, and have a basic reputation analysis.
 
-The idea is to create a social network wherein no one controls their own profile page. Instead, everyone else controls the content of your profile. A user cannot edit their own profile, and all additions are made anonymously. Content cannot be directly deleted, but rather any addition is upvoted or downvoted, or marked as true or false.
-
-The hope is to strip away the glorification of self-images, allowing the community to reach truth about a person, rather than a carefully packaged show. There are many obvious concerns.
+I am behind on my project. I got distracted and inmotivated this past week, but nevertheless, I will be able to pull through and produce something I'm proud of. I have an outline of a data model that I will begin implementing with mongomapper. I have a couple pages made with html. So I do not have as much done as I should.
