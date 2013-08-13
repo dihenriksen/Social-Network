@@ -7,6 +7,7 @@ gem 'atomic', '1.1.12'
 group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
 	gem 'better_errors'
+	gem 'capybara', '2.1.0'
 end
 
 # Use SCSS for stylesheets

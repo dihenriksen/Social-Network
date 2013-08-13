@@ -7,12 +7,5 @@ describe ProfileController do
 			expect(response).to be_success
 			expect(response.status).to eq(200)
 		end
-
-		it "displays the header" do
-			get :new
-			expect(page).to have_content('Mirror Mirror')
-			expect(page).to have_content('Home')
-			expect(page).to have_content('Profile')
-		end
 	end
 end
