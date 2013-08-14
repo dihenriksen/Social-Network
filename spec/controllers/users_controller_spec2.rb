@@ -1,11 +1,19 @@
 require 'spec_helper'
 
 describe UsersController do
-	let(:user) { User.make }
+	let(:user) { User.new(
+		name_first: "  jOHN  ",
+		name_last: "  zOIdBerg  "
+	)}
 
-	describe "GET new" do
-		it "capitalizes only first letter in first name" do
-			expect(user.name_first).to eql("Phil")
+	describe "POST create" do
+	# 	it "capitalizes only first letter in first name" do
+	# 		post :create, { user: { name_first: " jOHN ", name_last: "  zOIDberg  " } }
+	# 		expect(user.name_first).to eql("John")
+	# 	end
+
+		it "redirects to newly created profile" do
+
 		end
 	end
 

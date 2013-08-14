@@ -1,3 +1,5 @@
 I am trying to create a social network wherein users do not have control over their own profile, but rather their profile is edited by everyone else. Additionally, there will be a page viewable only by the user, where their reputation based on the activity of others on their profile, and their own anonymous contributions to the site, is condensed and summarized. Realistically, I hope to hardcode in a few users, allow them to edit profiles, create new profiles, and have a basic reputation analysis.
 
 I am behind on my project. I got distracted and inmotivated this past week, but nevertheless, I will be able to pull through and produce something I'm proud of. I have an outline of a data model that I will begin implementing with mongomapper. I have a couple pages made with html. So I do not have as much done as I should.
+
+Pivotal Tracker: https://www.pivotaltracker.com/s/projects/884908
