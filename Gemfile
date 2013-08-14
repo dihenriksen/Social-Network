@@ -8,6 +8,7 @@ group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
 	gem 'better_errors'
 	gem 'capybara', '2.1.0'
+	gem 'mailcatcher'
 end
 
 gem 'mongo_mapper', github: 'jnunemaker/mongomapper', ref: "f08b34815e3a36cc94a5ed70e334700a664fa856"
