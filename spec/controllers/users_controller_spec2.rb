@@ -13,7 +13,14 @@ describe UsersController do
 	# 	end
 
 		it "redirects to newly created profile" do
+			post :create, { user: {
+				name_first: "John",
+				name_last: "Zoidberg",
+				email: "zoidberg@whynotzoidberg.com"
+			}}
 
+			response.code.should eql "302"
+			response.should redirect_to profile_path #how to pass in :id with a test?
 		end
 	end
 

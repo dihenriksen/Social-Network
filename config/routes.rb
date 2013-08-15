@@ -1,12 +1,7 @@
 Reputation::Application.routes.draw do
   resources :users
+  resources :profiles
 
-  get "/new" => "profile#new"
-  get "profile/create"
-  get "profile/show"
-  get "profile/edit"
-  get "profile/update"
-  get "profile/destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

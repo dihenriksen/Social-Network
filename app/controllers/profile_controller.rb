@@ -17,14 +17,4 @@ class ProfileController < ApplicationController
   def destroy
   end
 
-  private
-
-  def user_params
-    params.require(:user).permit(
-      :name_first
-      :name_last
-      :email
-    )
-  end
-
 end
