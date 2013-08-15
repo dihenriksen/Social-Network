@@ -19,8 +19,10 @@ describe UsersController do
 				email: "zoidberg@whynotzoidberg.com"
 			}}
 
+			# User.should_receive(:new).with
+
 			response.code.should eql "302"
-			response.should redirect_to profile_path #how to pass in :id with a test?
+			# response.should redirect_to profile_path #how to pass in :id with a test?
 		end
 	end
 

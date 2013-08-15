@@ -1,0 +1,13 @@
+<div id="prof_pic_container" class="clearfix">
+	<%= image_tag(@user.profile_picture, alt: "No picture loaded", class: "img-responsive profile_picture")%>
+</div>
+
+<div id="basic_info" class="clearfix">
+	<ul class="list-group">
+		<h1 class="list-group-item-heading"><%= @user.full_name %></h1>
+		<li class="list-group-item">Current City: <%= @user.current_city %></li>
+		<li class="list-group-item">Work: <%= @user.current_work %></li>
+		<li class="list-group-item">Birthday: <%= @user.born_on.to_date %></li>
+		<li class="list-group-item">Education: <%= @user.education %></li>
+	</ul>
+</div>

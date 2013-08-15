@@ -2,8 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container {
-	width: 100%;
+#prof_pic_container {
+	max-width: 20%;
+	float: left;
+}
+
+#basic_info {
+	width: 70%;
+	// border: 1px solid black;
+	margin-left: 80px;
+	float: left;
+	#name {
+		float: left;
+	}
+	ul {
+		float: left;
+	}
 }
 
 body {
@@ -15,11 +29,5 @@ body {
 }
 
 .profile_picture {
-	height: 250px;
-	width: 150px;
-	float: left;
-}
-
-#name {
 	float: left;
 }
