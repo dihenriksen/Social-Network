@@ -1,13 +1,35 @@
-<div id="prof_pic_container" class="clearfix">
-	<%= image_tag(@user.profile_picture, alt: "No picture loaded", class: "img-responsive profile_picture")%>
+<div id="top_part" class="clearfix">
+	<div id="prof_pic_container" class="clearfix">
+		<%= image_tag(@user.profile_picture, alt: "No picture loaded", class: "img-responsive profile_picture")%>
+	</div>
+
+	<div id="basic_info" class="clearfix">
+		<ul class="list-group">
+			<h1 class="list-group-item-heading"><%= @user.full_name %></h1>
+			<li class="list-group-item">Current City: <%= @user.current_city %></li>
+			<li class="list-group-item">Work: <%= @user.current_work %></li>
+			<li class="list-group-item">Birthday: <%= @user.born_on.to_date %></li>
+			<li class="list-group-item">Education: <%= @user.education %></li>
+		</ul>
+	</div>
 </div>
 
-<div id="basic_info" class="clearfix">
-	<ul class="list-group">
-		<h1 class="list-group-item-heading"><%= @user.full_name %></h1>
-		<li class="list-group-item">Current City: <%= @user.current_city %></li>
-		<li class="list-group-item">Work: <%= @user.current_work %></li>
-		<li class="list-group-item">Birthday: <%= @user.born_on.to_date %></li>
-		<li class="list-group-item">Education: <%= @user.education %></li>
+<div id="sidebar">
+	<ul class="nav nav-pills nav-stacked">
+		<li class="active"><a href="#">News and Gossip</a></li>
+		<li><a href="#">Stories</a></li>
+		<li><a href="#">Quotes</a></li>
+		<li><a href="#">Personality</a></li>
+		<li><a href="#">Romance</a></li>
+		<li><a href="#">At the Workplace</a></li>
+		<li><a href="#">Other Coolnesses</a></li>
 	</ul>
+</div>
+
+<div id="news">
+	<span>Posted on: Time / Date</span>
+	<span></span>
+	<p class="news_element">
+		I just want to talk. It has nothing to do with mating. Fry, that doesn't make sense. Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon. Oh, how awful. Did he at least die painlessly? …To shreds, you say. Well, how is his wife holding up? …To shreds, you say. Noooooo!
+	</p>
 </div>
