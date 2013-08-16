@@ -9,6 +9,28 @@
 }
 
 #news {
+	.news_posted_time {
+		margin-left: 10px;
+	}
+	.news_element {
+		margin-left: 10px;
+	}
+	.news_element_judgment_bar {
+		float: right;
+		i {
+			font-weight: bold;
+			font-size: 18px;
+		}
+		.true_false_divider {
+			display: inline-block;
+			width: 30px;
+			height: 10px;
+		}
+	}
+}
+
+
+#news {
 	float: left;
 	width: 60%;
 	border: 1px solid black;
