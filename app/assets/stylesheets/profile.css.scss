@@ -2,20 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#prof_pic_container {
-	margin-left: 20px;
-	max-width: 20%;
+@mixin comment_base {
+	position: absolute;
 	float: left;
-}
-
-#news {
-	.news_posted_time {
+	border: 1px solid black;
+	border-radius: 5px;
+	.posted_time {
 		margin-left: 10px;
 	}
-	.news_element {
+	.comment_element {
 		margin-left: 10px;
 	}
-	.news_element_judgment_bar {
+	.judgment_bar {
 		float: right;
 		i {
 			font-weight: bold;
@@ -30,13 +28,26 @@
 	}
 }
 
-
-#news {
+#comment_container {
+	position: relative;
 	float: left;
 	width: 60%;
-	border: 1px solid black;
-	border-radius: 5px;
 	margin-left: 20px;
+}
+
+#prof_pic_container {
+	margin-left: 20px;
+	max-width: 20%;
+	float: left;
+}
+
+#news {
+	@include comment_base;
+}
+
+#stories {
+	@include comment_base;
+	visibility: hidden;
 }
 
 #sidebar {
