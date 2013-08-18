@@ -35,12 +35,6 @@
 	margin-left: 20px;
 }
 
-#prof_pic_container {
-	margin-left: 20px;
-	max-width: 20%;
-	float: left;
-}
-
 #news {
 	@include comment_base;
 }
@@ -48,6 +42,37 @@
 #stories {
 	@include comment_base;
 	visibility: hidden;
+}
+
+#quotes {
+	@include comment_base;
+	visibility: hidden;
+}
+
+#personality {
+	@include comment_base;
+	visibility: hidden;
+}
+
+#romance {
+	@include comment_base;
+	visibility: hidden;
+}
+
+#workplace {
+	@include comment_base;
+	visibility: hidden;
+}
+
+#coolnesses {
+	@include comment_base;
+	visibility: hidden;
+}
+
+#prof_pic_container {
+	margin-left: 20px;
+	max-width: 20%;
+	float: left;
 }
 
 #sidebar {

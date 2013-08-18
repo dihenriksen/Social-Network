@@ -6,19 +6,31 @@ $(function() {
 	$(".select").click(function() {
 		$(this).addClass('active');
 		$(".select").not($(this)).removeClass('active');
+		$(".visible")[0].style.visibility = 'hidden';
+		$(".visible").removeClass('visible');
 
 		// Hide and Display appropriate comments
 		if ($(this).hasClass('select_news')) {
-			$(".visible")[0].style.visibility = 'hidden';
-			$(".visible").removeClass('visible');
 			$("#news").addClass('visible');
 			$("#news")[0].style.visibility = 'visible';
 		} else if ($(this).hasClass('select_stories')) {
-			console.log($(".visible")[0]);
-			$(".visible")[0].style.visibility = 'hidden';
-			$(".visible").removeClass('visible');
 			$("#stories").addClass('visible');
 			$("#stories")[0].style.visibility = 'visible';
+		} else if ($(this).hasClass('select_quotes')) {
+			$("#quotes").addClass('visible');
+			$("#quotes")[0].style.visibility = 'visible';
+		} else if ($(this).hasClass('select_personality')) {
+			$("#personality").addClass('visible');
+			$("#personality")[0].style.visibility = 'visible';
+		} else if ($(this).hasClass('select_romance')) {
+			$("#romance").addClass('visible');
+			$("#romance")[0].style.visibility = 'visible';
+		} else if ($(this).hasClass('select_workplace')) {
+			$("#workplace").addClass('visible');
+			$("#workplace")[0].style.visibility = 'visible';
+		} else {
+			$("#coolnesses").addClass('visible');
+			$("#coolnesses")[0].style.visibility = 'visible';
 		}
 		return false
 	});
