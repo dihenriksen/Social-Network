@@ -18,6 +18,27 @@ class User
   key :schools, Hash
   key :profile_picture, String # this will hold a link to a profile picture
 
+  key :news_ids, Array
+  many :news, in: :news_ids
+
+  key :story_ids, Array
+  many :stories, in: :story_ids
+
+  key :quote_ids, Array
+  many :quotes, in: :quote_ids
+
+  key :personality_ids, Array
+  many :personalities, in: :personality_ids
+
+  key :romance_ids, Array
+  many :romances, in: :romance_ids
+
+  key :workplace_ids, Array
+  many :workplaces, in: :workplace_ids
+
+  key :coolness_ids, Array
+  many :coolnesses, in: :coolness_ids
+
   def full_name
     self.name_first + " " + self.name_last
   end
