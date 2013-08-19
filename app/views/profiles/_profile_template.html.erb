@@ -68,7 +68,7 @@
 		<span class="posted_time">Posted on: Time / Date</span>
 		<div class="comment_element">
 			<p>
-				"And as the candy hearts poured into the fiery quasar, a wonderful thing happened, why not?"
+				"<%= Quote.find_by_id(@user.quote_ids[0]).content %>"
 			</p>
 		</div>
 		<div class="judgment_bar">
