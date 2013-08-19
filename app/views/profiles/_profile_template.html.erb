@@ -68,15 +68,15 @@
 		<span class="posted_time">Posted on: Time / Date</span>
 		<div class="comment_element">
 			<p>
-				"<%= @quotes.find_by_id(@user.quote_ids[0]).content %>"
+				"<%= @quotes.content.squish %>"
 			</p>
 		</div>
 		<div class="judgment_bar">
 			<a class="btn" href="#"><i style="color:#19d41d">T</i></a>
-			<span>Number of True-votes</span>
+			<span><%= @quotes.true_votes %></span>
 			<div class="true_false_divider"></div>
 			<a class="btn" href="#"><i style="color:#ED0909">F</i></a>
-			<span>Number of False-votes</span>
+			<span><%= @quotes.false_votes %></span>
 		</div>
 	</div>
 
