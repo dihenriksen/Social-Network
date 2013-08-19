@@ -7,6 +7,7 @@ class ProfilesController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @quotes = Quote.by_name(@user.name_first)
   end
 
   def edit
