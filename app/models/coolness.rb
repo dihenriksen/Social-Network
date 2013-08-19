@@ -1,4 +1,4 @@
-class Coolnesses < Comment
+class Coolness < Comment
 	include MongoMapper::Document
 
 	key :true_votes, Integer

@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.destroy_all
+
 User.create({
 	name_first: "John",
 	name_last: "Zoidberg",
@@ -38,6 +40,10 @@ User.create({
 	profile_picture: "http://theroyalrating.files.wordpress.com/2012/09/morbo-31.jpg"
 })
 
+Quote.create({
+	content: "Sweet Clyde, use variatonal parameters, and expand the Wronskian."
+	})
+
 User.create({
 	name_first: "Ethan",
 	name_last: "Bubblegum Tate",
@@ -52,12 +58,9 @@ User.create({
 		school_name: "Globetrotter U",
 		major: "Mathematics"
 	},
-	profile_picture: "http://oyster.ignimgs.com/mediawiki/apis.ign.com/futurama/c/c3/Bubbble.JPG"
+	profile_picture: "http://oyster.ignimgs.com/mediawiki/apis.ign.com/futurama/c/c3/Bubbble.JPG",
+	quote_ids: [Quote.first._id]
 })
-
-
-
-
 
 
 
