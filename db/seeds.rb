@@ -7,7 +7,26 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all
-Quote.destroy_all
+Comment.destroy_all
+
+Story.create({
+	content: "Captained the Harlem Globetrotters in their defeat of the Professor's
+	atomic supermen in a game of basketball.",
+	true_votes: 10,
+	false_votes: 8
+	})
+
+Story.create({
+	content: "With the Professor, served under Mom to capture a Yeti.",
+	true_votes: 54,
+	false_votes: 12
+	})
+
+Story.create({
+	content: "Served as a judge in the Bender vs. Elzar Iron Chef competition.",
+	true_votes: 15,
+	false_votes: 2
+	})
 
 Quote.create({
 	content: "Sweet Clyde, use variatonal parameters, and expand the Wronskian.",
@@ -27,6 +46,12 @@ Quote.create({
 	false_votes: 1
 })
 
+Quote.create({
+	content: "Oh, hello. Morbo the Annihilator here, sitting down to a delightful tea
+	in this fake living room set.",
+	true_votes: 12,
+	false_votes: 12
+})
 
 User.create({
 	name_first: "John",
@@ -42,7 +67,8 @@ User.create({
 		uncle: "Harold Zoid"
 	},
 	profile_picture: "http://pool.theinfosphere.org/images/7/79/Zoidberg_promo.png",
-	quote_ids: [Quote.all[1]._id]
+	quote_ids: [Quote.all[1].id],
+	story_ids: [Story.all[1].id]
 })
 
 User.create({
@@ -58,8 +84,10 @@ User.create({
 	family: {
 		wife: "Mrs. Morbo"
 	},
-	profile_picture: "http://theroyalrating.files.wordpress.com/2012/09/morbo-31.jpg"
-})
+	profile_picture: "http://theroyalrating.files.wordpress.com/2012/09/morbo-31.jpg",
+	quote_ids: [Quote.all[2].id],
+	story_ids: [Story.all[2].id]
+	})
 
 User.create({
 	name_first: "Ethan",
@@ -76,7 +104,8 @@ User.create({
 		major: "Mathematics"
 	},
 	profile_picture: "http://oyster.ignimgs.com/mediawiki/apis.ign.com/futurama/c/c3/Bubbble.JPG",
-	quote_ids: [Quote.first._id]
+	quote_ids: [Quote.all[0].id],
+	story_ids: [Story.all[0].id]
 })
 
 

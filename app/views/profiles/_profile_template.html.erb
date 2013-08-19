@@ -52,15 +52,15 @@
 		<span class="posted_time">Posted on: Time / Date</span>
 		<div class="comment_element">
 			<p>
-				You wouldn't. Ask anyway! Your best is an idiot! Ah, the 'Breakfast Club' soundtrack! I can't wait til I'm old enough to feel ways about stuff! Bender, quit destroying the universe! Calculon is gonna kill us and it's all everybody else's fault! I can explain. It's very valuable.
+				<%= @stories.content.squish %>
 			</p>
 		</div>
 		<div class="judgment_bar">
 			<a class="btn" href="#"><i style="color:#19d41d">T</i></a>
-			<span>Number of True-votes</span>
+			<span><%= @stories.true_votes %></span>
 			<div class="true_false_divider"></div>
 			<a class="btn" href="#"><i style="color:#ED0909">F</i></a>
-			<span>Number of False-votes</span>
+			<span><%= @stories.false_votes %></span>
 		</div>
 	</div>
 

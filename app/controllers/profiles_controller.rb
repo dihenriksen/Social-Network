@@ -8,8 +8,7 @@ class ProfilesController < ApplicationController
   def show
     @user = User.find(params[:id])
     @quotes = Quote.find_by_id(@user.quote_ids)
-    puts "*"*70
-    puts @quotes
+    @stories = Story.find_by_id(@user.story_ids)
   end
 
   def edit
