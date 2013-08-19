@@ -5,15 +5,7 @@
     <tr>
       <th>Name first</th>
       <th>Name last</th>
-      <th>Email</th>
-      <th>Salt</th>
-      <th>Fish</th>
-      <th>Code</th>
-      <th>Expires at</th>
-      <th>Born on</th>
-      <th>Friends</th>
-      <th>Family</th>
-      <th>Pictures</th>
+      <th>View Profile</th>
       <th></th>
       <th></th>
       <th></th>
@@ -25,15 +17,7 @@
       <tr>
         <td><%= user.name_first %></td>
         <td><%= user.name_last %></td>
-        <td><%= user.email %></td>
-        <td><%= user.salt %></td>
-        <td><%= user.fish %></td>
-        <td><%= user.code %></td>
-        <td><%= user.expires_at %></td>
-        <td><%= user.born_on %></td>
-        <td><%= user.friends %></td>
-        <td><%= user.family %></td>
-        <td><%= user.pictures %></td>
+        <td><%= link_to "Profile", profile_path(user) %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
