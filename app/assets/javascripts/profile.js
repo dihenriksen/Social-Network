@@ -3,6 +3,25 @@
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(function() {
+
+	$("#new_btn").click(function() {
+		$("#news_form")[0].style.visibility = "visible";
+		$("#news_form")[0].style.display = "block";
+		$("#news_form")[0].style.height = 0;
+		$("#news_form").animate({
+			height: "125",
+			width: "100%"}, 500);
+		return false;
+	});
+
+	$("#news_content").click(function() {
+		$("#news_content").animate({
+			rows: "5",
+			cols: "70"
+		}, 500);
+		return false;
+	});
+
 	$(".select").click(function() {
 		$(this).addClass('active');
 		$(".select").not($(this)).removeClass('active');
@@ -13,24 +32,31 @@ $(function() {
 		if ($(this).hasClass('select_news')) {
 			$("#news").addClass('visible');
 			$("#news")[0].style.visibility = 'visible';
+			$("#new_btn").html("New gossip...");
 		} else if ($(this).hasClass('select_stories')) {
 			$("#stories").addClass('visible');
 			$("#stories")[0].style.visibility = 'visible';
+			$("#new_btn").html("Tell a story...");
 		} else if ($(this).hasClass('select_quotes')) {
 			$("#quotes").addClass('visible');
 			$("#quotes")[0].style.visibility = 'visible';
+			$("#new_btn").html("New quote...");
 		} else if ($(this).hasClass('select_personality')) {
 			$("#personality").addClass('visible');
 			$("#personality")[0].style.visibility = 'visible';
+			$("#new_btn").html("What are they like?");
 		} else if ($(this).hasClass('select_romance')) {
 			$("#romance").addClass('visible');
 			$("#romance")[0].style.visibility = 'visible';
+			$("#new_btn").html("Romantic entanglements...");
 		} else if ($(this).hasClass('select_workplace')) {
 			$("#workplace").addClass('visible');
 			$("#workplace")[0].style.visibility = 'visible';
+			$("#new_btn").html("What are their work habits?");
 		} else {
 			$("#coolnesses").addClass('visible');
 			$("#coolnesses")[0].style.visibility = 'visible';
+			$("#new_btn").html("Post something cool...");
 		}
 		return false
 	});
