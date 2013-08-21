@@ -57,37 +57,41 @@
 
 	<div id="stories" class="comment clearfix">
 		<% if !@stories.empty? %>
-			<span class="posted_time">Posted on: Time / Date</span>
-			<div class="comment_element">
-				<p>
-					<%= @stories.content.squish %>
-				</p>
-			</div>
-			<div class="judgment_bar">
-				<a class="btn" href="#"><i style="color:#19d41d">T</i></a>
-				<span><%= @stories.true_votes %></span>
-				<div class="true_false_divider"></div>
-				<a class="btn" href="#"><i style="color:#ED0909">F</i></a>
-				<span><%= @stories.false_votes %></span>
-			</div>
+			<% @stories.each do |j| %>
+				<span class="posted_time">Posted on: Time / Date</span>
+				<div class="comment_element">
+					<p>
+						<%= j.content.squish %>
+					</p>
+				</div>
+				<div class="judgment_bar">
+					<a class="btn" href="#"><i style="color:#19d41d">T</i></a>
+					<span><%= j.true_votes %></span>
+					<div class="true_false_divider"></div>
+					<a class="btn" href="#"><i style="color:#ED0909">F</i></a>
+					<span><%= j.false_votes %></span>
+				</div>
+			<% end %>
 		<% end %>
 	</div>
 
 	<div id="quotes" class="comment clearfix">
 		<% if !@quotes.empty? %>
+		<% @quotes.each do |quote| %>
 			<span class="posted_time">Posted on: Time / Date</span>
 			<div class="comment_element">
 				<p>
-					"<%= @quotes.content.squish %>"
+					"<%= quote.content.squish %>"
 				</p>
 			</div>
 			<div class="judgment_bar">
 				<a class="btn" href="#"><i style="color:#19d41d">T</i></a>
-				<span><%= @quotes.true_votes %></span>
+				<span><%= quote.true_votes %></span>
 				<div class="true_false_divider"></div>
 				<a class="btn" href="#"><i style="color:#ED0909">F</i></a>
-				<span><%= @quotes.false_votes %></span>
+				<span><%= quote.false_votes %></span>
 			</div>
+			<% end %>
 		<% end %>
 	</div>
 

@@ -5,15 +5,10 @@
 $(function() {
 
 	$("#news_content").on('blur',function(e) {
-		// $("#news_content").css({
-		// 	height: "36",
-		// 	width: "155"
-		// });
 		$("#news_content").animate({
 			rows: "2",
 			cols: "20"
 		}, 1);
-		return false;
 	})
 
 	$("#news_content").on('focus',function() {
@@ -21,7 +16,6 @@ $(function() {
 			rows: "5",
 			cols: "70"
 		}, 100);
-		return false;
 	});
 
 	$(".select").click(function() {
