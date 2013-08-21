@@ -34,19 +34,23 @@
 	</div>
 
 	<div id="news" class="comment visible clearfix">
-		<span class="posted_time">Posted on: Time / Date</span>
-		<div class="comment_element">
-			<p>
-				I just want to talk. It has nothing to do with mating. Fry, that doesn't make sense. Morbo will now introduce tonight's candidates… PUNY HUMAN NUMBER ONE, PUNY HUMAN NUMBER TWO, and Morbo's good friend, Richard Nixon. Oh, how awful. Did he at least die painlessly? …To shreds, you say. Well, how is his wife holding up? …To shreds, you say. Noooooo!
-			</p>
-		</div>
-		<div class="judgment_bar">
-			<%= button_to "T", { controller: "news", action: "update", user_id: @user.id, id: '52141205496a9d5cb9000030' }, method: :put %>
-			<span>Number of True-votes</span>
-			<div class="true_false_divider"></div>
-			<a class="btn" href="#"><i style="color:#ED0909">F</i></a>
-			<span>Number of False-votes</span>
-		</div>
+		<% if @news %>
+			<% for j in @news %>
+			<span class="posted_time">Posted on: Time / Date</span>
+			<div class="comment_element clearfix">
+				<p>
+					<%= j.content.squish %>
+				</p>
+				<div class="judgment_bar">
+					<%= button_to "Truth!", { controller: "news", action: "update", user_id: @user.id, id: '52141205496a9d5cb9000030' }, method: :put %>
+					<span><%= j.true_votes %></span>
+					<div class="true_false_divider"></div>
+					<%= button_to "Lies!", { controller: "news", action: "update", user_id: @user.id, id: '52141205496a9d5cb9000030' }, method: :put %>
+					<span><%= j.false_votes %></span>
+				</div>
+			</div>
+			<% end %>
+		<% end %>
 	</div>
 
 

@@ -27,6 +27,11 @@
 	}
 }
 
+.comment_element {
+	border: 1px solid black;
+	padding: 3px;
+	margin-bottom: 20px;
+}
 
 #comment_container {
 	position: relative;
@@ -37,6 +42,7 @@
 
 #news {
 	@include comment_base;
+	border: none;
 }
 
 #stories {
