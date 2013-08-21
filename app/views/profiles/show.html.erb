@@ -34,9 +34,9 @@
 	</div>
 
 	<div id="news" class="comment visible clearfix">
-		<% if @news %>
+		<% if !@news.empty? %>
 			<% for j in @news %>
-			<span class="posted_time">Posted on: Time / Date</span>
+			<span class="posted_time">Posted on: <%= j.created_at.to_date %></span>
 			<div class="comment_element clearfix">
 				<p>
 					<%= j.content.squish %>
@@ -56,35 +56,39 @@
 
 
 	<div id="stories" class="comment clearfix">
-		<span class="posted_time">Posted on: Time / Date</span>
-		<div class="comment_element">
-			<p>
-				<%= @stories.content.squish %>
-			</p>
-		</div>
-		<div class="judgment_bar">
-			<a class="btn" href="#"><i style="color:#19d41d">T</i></a>
-			<span><%= @stories.true_votes %></span>
-			<div class="true_false_divider"></div>
-			<a class="btn" href="#"><i style="color:#ED0909">F</i></a>
-			<span><%= @stories.false_votes %></span>
-		</div>
+		<% if !@stories.empty? %>
+			<span class="posted_time">Posted on: Time / Date</span>
+			<div class="comment_element">
+				<p>
+					<%= @stories.content.squish %>
+				</p>
+			</div>
+			<div class="judgment_bar">
+				<a class="btn" href="#"><i style="color:#19d41d">T</i></a>
+				<span><%= @stories.true_votes %></span>
+				<div class="true_false_divider"></div>
+				<a class="btn" href="#"><i style="color:#ED0909">F</i></a>
+				<span><%= @stories.false_votes %></span>
+			</div>
+		<% end %>
 	</div>
 
 	<div id="quotes" class="comment clearfix">
-		<span class="posted_time">Posted on: Time / Date</span>
-		<div class="comment_element">
-			<p>
-				"<%= @quotes.content.squish %>"
-			</p>
-		</div>
-		<div class="judgment_bar">
-			<a class="btn" href="#"><i style="color:#19d41d">T</i></a>
-			<span><%= @quotes.true_votes %></span>
-			<div class="true_false_divider"></div>
-			<a class="btn" href="#"><i style="color:#ED0909">F</i></a>
-			<span><%= @quotes.false_votes %></span>
-		</div>
+		<% if !@quotes.empty? %>
+			<span class="posted_time">Posted on: Time / Date</span>
+			<div class="comment_element">
+				<p>
+					"<%= @quotes.content.squish %>"
+				</p>
+			</div>
+			<div class="judgment_bar">
+				<a class="btn" href="#"><i style="color:#19d41d">T</i></a>
+				<span><%= @quotes.true_votes %></span>
+				<div class="true_false_divider"></div>
+				<a class="btn" href="#"><i style="color:#ED0909">F</i></a>
+				<span><%= @quotes.false_votes %></span>
+			</div>
+		<% end %>
 	</div>
 
 	<div id="personality" class="comment clearfix">

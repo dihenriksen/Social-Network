@@ -7,7 +7,7 @@ class NewsController < ApplicationController
 	def create
 		@user.news << News.create(news_params)
 		@user.save
-		render json: @user
+		redirect_to profile_path(@user)
 	end
 
 	def update
