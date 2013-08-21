@@ -1,10 +1,24 @@
 class NewsController < ApplicationController
+	before_action :get_user
 
 	def index
 	end
 
 	def create
-		render json: params
+		@user.news << News.create(news_params)
+		@user.save
+		render json: @user
+	end
+
+	private
+
+	def get_user
+		head :bad_request unless (@user = User.find_by_id params[:user_id])
+	end
+
+	def news_params
+		params.require(:news).permit(
+			:content)
 	end
 
 end

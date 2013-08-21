@@ -4,6 +4,6 @@ class Comment
 	key :content, String
 	key :user_subject, ObjectId
 	key :user_author, ObjectId
-	key :written_on, Time
+	timestamps!
 
 end
