@@ -10,6 +10,14 @@ class NewsController < ApplicationController
 		render json: @user
 	end
 
+	def update
+		render json: params
+	end
+
+	def show
+		render json: params
+	end
+
 	private
 
 	def get_user

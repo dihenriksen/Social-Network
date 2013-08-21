@@ -41,13 +41,14 @@
 			</p>
 		</div>
 		<div class="judgment_bar">
-			<a class="btn" href="#"><i style="color:#19d41d">T</i></a>
+			<%= button_to "T", { controller: "news", action: "update", user_id: @user.id, id: '52141205496a9d5cb9000030' }, method: :put %>
 			<span>Number of True-votes</span>
 			<div class="true_false_divider"></div>
 			<a class="btn" href="#"><i style="color:#ED0909">F</i></a>
 			<span>Number of False-votes</span>
 		</div>
 	</div>
+
 
 
 	<div id="stories" class="comment clearfix">
