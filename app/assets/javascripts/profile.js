@@ -4,21 +4,23 @@
 
 $(function() {
 
-	$("#new_btn").click(function() {
-		$("#news_form")[0].style.visibility = "visible";
-		$("#news_form")[0].style.display = "block";
-		$("#news_form")[0].style.height = 0;
-		$("#news_form").animate({
-			height: "125",
-			width: "100%"}, 500);
+	$("#news_content").on('blur',function(e) {
+		// $("#news_content").css({
+		// 	height: "36",
+		// 	width: "155"
+		// });
+		$("#news_content").animate({
+			rows: "2",
+			cols: "20"
+		}, 1);
 		return false;
-	});
+	})
 
-	$("#news_content").click(function() {
+	$("#news_content").on('focus',function() {
 		$("#news_content").animate({
 			rows: "5",
 			cols: "70"
-		}, 500);
+		}, 100);
 		return false;
 	});
 
