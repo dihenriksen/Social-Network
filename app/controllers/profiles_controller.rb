@@ -19,13 +19,13 @@ class ProfilesController < ApplicationController
 
     @quotes = []
     for i in @user.quote_ids do
-      @quotes << Quote.find_by_id(@user.quote_ids) unless Quote.find_by_id(i).nil?
+      @quotes << Quote.find_by_id(i) unless Quote.find_by_id(i).nil?
     end
     @quotes.reverse!
 
     @stories = []
     for i in @user.story_ids do
-      @stories << Story.find_by_id(@user.story_ids) unless Story.find_by_id(i).nil?
+      @stories << Story.find_by_id(i) unless Story.find_by_id(i).nil?
     end
     @stories.reverse!
 
